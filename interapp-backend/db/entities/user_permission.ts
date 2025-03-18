@@ -1,3 +1,7 @@
+/**
+ * Permissions held by an OneInteract user.
+ */
+
 import { Entity, ManyToOne, PrimaryColumn, type Relation } from 'typeorm';
 import { User } from './user';
 

@@ -1,3 +1,9 @@
+/**
+ * The client used by the frontend to communicate with the backend api
+ * 
+ * Depends on: axios
+ */
+
 import axios, { AxiosInstance } from 'axios';
 
 export interface APIClientConfig {

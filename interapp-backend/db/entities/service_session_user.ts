@@ -1,3 +1,8 @@
+/**
+ * Information on a user's participation in an Interact service session.
+ * i.e. session ID, username of participant, is ad-hoc, attendance state
+ */
+
 import { Entity, PrimaryColumn, Column, ManyToOne, type Relation } from 'typeorm';
 import { User } from './user';
 import { ServiceSession } from './service_session';
@@ -6,6 +11,7 @@ export enum AttendanceStatus {
   Attended = 'Attended',
   Absent = 'Absent',
   ValidReason = 'Valid Reason',
+  Late = 'Late' // FIXME: task 1 -- add "late" status; finish the frontend change
 }
 
 @Entity()

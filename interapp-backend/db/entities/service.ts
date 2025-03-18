@@ -1,3 +1,7 @@
+/**
+ * Information about an Interact service: ID, name, description, contact, start/end time, etc...
+ */
+
 import {
   Entity,
   PrimaryGeneratedColumn,

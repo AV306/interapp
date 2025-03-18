@@ -1,3 +1,7 @@
+/**
+ * An attachment in an announcement.
+ */
+
 import { Entity, PrimaryColumn, Column, ManyToOne, type Relation } from 'typeorm';
 import { Announcement } from './announcement';
 

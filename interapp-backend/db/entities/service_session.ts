@@ -1,3 +1,10 @@
+/**
+ * Information about a specific session of an Interact service: ID, start/end time, hours...
+ */
+
+// TODO: clarify - how `start_time` and `end_time` can differ from that in service.ts
+// (also, is it only for past sessions?)
+
 import {
   Entity,
   PrimaryGeneratedColumn,

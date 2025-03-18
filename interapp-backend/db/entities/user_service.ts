@@ -1,3 +1,9 @@
+/**
+ * The service assigned to a user.
+ */
+
+// TODO: check description w sebastian 
+
 import { Entity, type Relation, ManyToOne, PrimaryColumn } from 'typeorm';
 import { User } from './user';
 import { Service } from './service';
