@@ -1,0 +1,307 @@
+/workspace/interapp/interapp-backend/eslint.config.js:
+	['tseslint'] from /workspace/interapp-backend
+/workspace/interapp/interapp-backend/db/data_source.ts:
+	['DataSource', 'DataSourceOptions'] from /workspace/interapp-backend/db
+	['LogLevel'] from /interapp-backend/db
+/workspace/interapp/interapp-backend/db/init.ts:
+	['AppDataSource'] from @db/data_source
+/workspace/interapp/interapp-backend/scheduler/scheduler.ts:
+	['schedule'] from /workspace/interapp-backend/scheduler
+	['ServiceModel', 'UserModel'] from @models/.
+	['User'] from @db/entities/user
+	['AttendanceStatus'] from @db/entities/service_session_user
+	['redisClient'] from @utils/init_redis
+	['randomBytes'] from /workspace/interapp-backend/scheduler
+	['$'] from /workspace/interapp-backend/scheduler
+	['existsSync', 'mkdirSync'] from /workspace/interapp-backend/scheduler
+/workspace/interapp/interapp-backend/scripts/create-sessions.ts:
+	['ServiceModel', 'UserModel'] from @models/.
+	['User'] from @db/entities/user
+	['AttendanceStatus'] from @db/entities/service_session_user
+/workspace/interapp/interapp-backend/scripts/fix-too-long.ts:
+	['User', 'UserPermission'] from @db/entities
+	['appDataSource'] from @utils/init_datasource
+	['writeFileSync'] from /workspace/interapp-backend/scripts
+/workspace/interapp/interapp-backend/scripts/import-hours.ts:
+	['readFileSync', 'writeFileSync'] from /workspace/interapp-backend/scripts
+/workspace/interapp/interapp-backend/scripts/import.ts:
+	['readFileSync', 'writeFileSync'] from /workspace/interapp-backend/scripts
+	['User', 'UserPermission'] from @db/entities
+	['appDataSource'] from @utils/init_datasource
+/workspace/interapp/interapp-backend/scripts/manual-pw-reset.ts:
+	['Bun'] from /workspace/interapp-backend/scripts
+	['randomBytes'] from /workspace/interapp-backend/scripts
+/workspace/interapp/interapp-backend/tests/constants.test.ts:
+	['expect', 'test', 'describe'] from /workspace/interapp-backend/tests
+	['recreateDB', 'recreateMinio', 'recreateRedis'] from /workspace/interapp-backend/tests
+/workspace/interapp/interapp-backend/api/email_handler/index.ts:
+	['Transporter', 'createTransport'] from /workspace/interapp-backend/api/email_handler
+	['hbs'] from /workspace/interapp-backend/api/email_handler
+/workspace/interapp/interapp-backend/api/models/announcement.ts:
+	['appDataSource'] from @utils/init_datasource
+	['Announcement', 'AnnouncementCompletion', 'AnnouncementAttachment', 'User'] from @db/entities
+	['HTTPErrors'] from @utils/errors
+	['UserModel'] from /workspace/interapp-backend/api/models
+	['minioClient'] from @utils/init_minio
+	['dataUrlToBuffer'] from @utils/dataUrlToBuffer
+/workspace/interapp/interapp-backend/api/models/auth.ts:
+	['appDataSource'] from @utils/init_datasource
+	['User', 'UserPermission'] from @db/entities
+	['HTTPErrors'] from @utils/errors
+	['SignJWT', 'jwtVerify', 'JWTPayload', 'JWTVerifyResult'] from /workspace/interapp-backend/api/models
+	['redisClient'] from @utils/init_redis
+	['minioClient'] from @utils/init_minio
+/workspace/interapp/interapp-backend/api/models/hello.ts:
+	['appDataSource'] from @utils/init_datasource
+	['HelloWorld'] from @db/entities/hello_world
+/workspace/interapp/interapp-backend/api/models/service.ts:
+	['HTTPErrors'] from @utils/errors
+	['appDataSource'] from @utils/init_datasource
+	['minioClient'] from @utils/init_minio
+	['dataUrlToBuffer'] from @utils/dataUrlToBuffer
+	['AttendanceStatus', 'Service', 'ServiceSession', 'ServiceSessionUser'] from @db/entities
+	['UserModel'] from /workspace/interapp-backend/api/models
+	['redisClient'] from @utils/init_redis
+/workspace/interapp/interapp-backend/api/models/user.ts:
+	['appDataSource'] from @utils/init_datasource
+	['HTTPErrors'] from @utils/errors
+	['randomBytes'] from /workspace/interapp-backend/api/models
+	['redisClient'] from @utils/init_redis
+	['transporter'] from @email_handler/index
+	['Mail'] from /interapp-backend/api/models
+	['dataUrlToBuffer'] from @utils/dataUrlToBuffer
+	['minioClient'] from @utils/init_minio
+/workspace/interapp/interapp-backend/api/routes/index.ts:
+	['express'] from /workspace/interapp-backend/api/routes
+	['cors'] from /workspace/interapp-backend/api/routes
+	['cookieParser'] from /workspace/interapp-backend/api/routes
+	['handleError', 'generateRateLimit'] from /workspace/interapp-backend/api/routes
+	['serve', 'setup'] from /workspace/interapp-backend/api/routes
+	['swagger_docs'] from /workspace/interapp/interapp-backend/api/routes
+/workspace/interapp/interapp-backend/api/routes/middleware.ts:
+	['Request', 'Response', 'NextFunction'] from /workspace/interapp-backend/api/routes
+	['HTTPError', 'HTTPErrorCode'] from @utils/errors
+	['AuthModel', 'UserModel'] from @models/.
+	['z'] from /workspace/interapp-backend/api/routes
+	['rateLimit'] from /workspace/interapp-backend/api/routes
+/workspace/interapp/interapp-backend/api/utils/dataUrlToBuffer.ts:
+	['Buffer'] from /workspace/interapp-backend/api/utils
+/workspace/interapp/interapp-backend/api/utils/init_datasource.ts:
+	['AppDataSourceOptions'] from @db/data_source
+	['DataSource'] from /workspace/interapp-backend/api/utils
+/workspace/interapp/interapp-backend/api/utils/init_minio.ts:
+	['Client'] from /workspace/interapp-backend/api/utils
+/workspace/interapp/interapp-backend/api/utils/init_redis.ts:
+	['createClient'] from /workspace/interapp-backend/api/utils
+/workspace/interapp/interapp-backend/api/models/exports/exports_attendance.ts:
+	['BaseExportsModel'] from /workspace/interapp-backend/api/models/exports
+	['ServiceSession', 'type', 'AttendanceStatus'] from @db/entities
+	['HTTPErrors'] from @utils/errors
+	['WorkSheet'] from /workspace/interapp-backend/api/models/exports
+	['appDataSource'] from @utils/init_datasource
+/workspace/interapp/interapp-backend/api/models/exports/exports_base.ts:
+	['xlsx'] from /workspace/interapp-backend/api/models/exports
+/workspace/interapp/interapp-backend/api/models/exports/exports_service_hours.ts:
+	['BaseExportsModel'] from /workspace/interapp-backend/api/models/exports
+	['ServiceSession', 'type', 'AttendanceStatus'] from @db/entities
+	['HTTPErrors'] from @utils/errors
+	['WorkSheet'] from /workspace/interapp-backend/api/models/exports
+	['appDataSource'] from @utils/init_datasource
+/workspace/interapp/interapp-backend/api/models/exports/types.ts:
+	['AttendanceStatus'] from @db/entities
+/workspace/interapp/interapp-backend/api/routes/endpoints/hello.ts:
+	['Router'] from /workspace/interapp-backend/api/routes/endpoints
+	['hello'] from @models/.
+/workspace/interapp/interapp-backend/api/routes/endpoints/announcement/announcement.ts:
+	['Router'] from /workspace/interapp-backend/api/routes/endpoints/announcement
+	['validateRequiredFields', 'verifyJWT', 'verifyRequiredPermission'] from /workspace/workspace/interapp/interapp-backend/api/routes/endpoints/announcement
+	['AnnouncementModel'] from @models/.
+	['Permissions'] from @utils/permissions
+	['multer'] from /workspace/interapp-backend/api/routes/endpoints/announcement
+	['z'] from /workspace/interapp-backend/api/routes/endpoints/announcement
+/workspace/interapp/interapp-backend/api/routes/endpoints/announcement/validation.ts:
+	['z'] from /workspace/interapp-backend/api/routes/endpoints/announcement
+/workspace/interapp/interapp-backend/api/routes/endpoints/auth/auth.ts:
+	['Router'] from /workspace/interapp-backend/api/routes/endpoints/auth
+	['validateRequiredFields', 'verifyJWT'] from /workspace/workspace/interapp/interapp-backend/api/routes/endpoints/auth
+	['SignupFields', 'SigninFields'] from /workspace/interapp-backend/api/routes/endpoints/auth
+	['AuthModel'] from @models/.
+	['z'] from /workspace/interapp-backend/api/routes/endpoints/auth
+/workspace/interapp/interapp-backend/api/routes/endpoints/auth/validation.ts:
+	['z'] from /workspace/interapp-backend/api/routes/endpoints/auth
+/workspace/interapp/interapp-backend/api/routes/endpoints/exports/exports.ts:
+	['AttendanceExportsModel'] from @models/exports
+	['z'] from /workspace/interapp-backend/api/routes/endpoints/exports
+	['validateRequiredFields', 'verifyJWT', 'verifyRequiredPermission'] from @routes/middleware
+	['ExportsFields'] from /workspace/interapp-backend/api/routes/endpoints/exports
+	['Router'] from /workspace/interapp-backend/api/routes/endpoints/exports
+	['Permissions'] from @utils/permissions
+/workspace/interapp/interapp-backend/api/routes/endpoints/exports/validation.ts:
+	['z'] from /workspace/interapp-backend/api/routes/endpoints/exports
+/workspace/interapp/interapp-backend/api/routes/endpoints/service/service.ts:
+	['Router'] from /workspace/interapp-backend/api/routes/endpoints/service
+	['validateRequiredFields', 'verifyJWT', 'verifyRequiredPermission'] from /workspace/workspace/interapp/interapp-backend/api/routes/endpoints/service
+	['HTTPError', 'HTTPErrorCode'] from @utils/errors
+	['Permissions'] from @utils/permissions
+	['UserModel', 'ServiceModel'] from @models/.
+	['z'] from /workspace/interapp-backend/api/routes/endpoints/service
+	['AttendanceStatus'] from @db/entities
+/workspace/interapp/interapp-backend/api/routes/endpoints/service/validation.ts:
+	['AttendanceStatus'] from @db/entities
+	['z'] from /workspace/interapp-backend/api/routes/endpoints/service
+/workspace/interapp/interapp-backend/api/routes/endpoints/user/user.ts:
+	['Router'] from /workspace/interapp-backend/api/routes/endpoints/user
+	['validateRequiredFields', 'verifyJWT', 'verifyRequiredPermission'] from /workspace/workspace/interapp/interapp-backend/api/routes/endpoints/user
+	['z'] from /workspace/interapp-backend/api/routes/endpoints/user
+	['UserModel'] from @models/.
+	['HTTPError', 'HTTPErrorCode'] from @utils/errors
+	['Permissions'] from @utils/permissions
+/workspace/interapp/interapp-backend/api/routes/endpoints/user/validation.ts:
+	['z'] from /workspace/interapp-backend/api/routes/endpoints/user
+	['Permissions'] from @utils/permissions
+/workspace/interapp/interapp-backend/db/entities/announcement.ts:
+	['User'] from /workspace/interapp-backend/db/entities
+	['AnnouncementCompletion'] from /workspace/interapp-backend/db/entities
+	['AnnouncementAttachment'] from /workspace/interapp-backend/db/entities
+/workspace/interapp/interapp-backend/db/entities/announcement_attachment.ts:
+	['Entity', 'PrimaryColumn', 'Column', 'ManyToOne', 'type', 'Relation'] from /workspace/interapp-backend/db/entities
+	['Announcement'] from /workspace/interapp-backend/db/entities
+/workspace/interapp/interapp-backend/db/entities/announcement_completion.ts:
+	['Entity', 'Column', 'PrimaryColumn', 'ManyToOne', 'type', 'Relation'] from /workspace/interapp-backend/db/entities
+	['Announcement'] from /workspace/interapp-backend/db/entities
+	['User'] from /workspace/interapp-backend/db/entities
+/workspace/interapp/interapp-backend/db/entities/hello_world.ts:
+	['Entity', 'Column', 'PrimaryGeneratedColumn'] from /workspace/interapp-backend/db/entities
+/workspace/interapp/interapp-backend/db/entities/service.ts:
+	['UserService'] from /workspace/interapp-backend/db/entities
+	['User'] from /workspace/interapp-backend/db/entities
+	['ServiceSession'] from /workspace/interapp-backend/db/entities
+/workspace/interapp/interapp-backend/db/entities/service_session.ts:
+	['Service'] from /workspace/interapp-backend/db/entities
+	['ServiceSessionUser'] from /workspace/interapp-backend/db/entities
+/workspace/interapp/interapp-backend/db/entities/service_session_user.ts:
+	['Entity', 'PrimaryColumn', 'Column', 'ManyToOne', 'type', 'Relation'] from /workspace/interapp-backend/db/entities
+	['User'] from /workspace/interapp-backend/db/entities
+	['ServiceSession'] from /workspace/interapp-backend/db/entities
+/workspace/interapp/interapp-backend/db/entities/user.ts:
+	['Entity', 'Column', 'PrimaryColumn', 'OneToMany', 'type', 'Relation'] from /workspace/interapp-backend/db/entities
+	['UserPermission'] from /workspace/interapp-backend/db/entities
+	['UserService'] from /workspace/interapp-backend/db/entities
+	['ServiceSessionUser'] from /workspace/interapp-backend/db/entities
+/workspace/interapp/interapp-backend/db/entities/user_permission.ts:
+	['Entity', 'ManyToOne', 'PrimaryColumn', 'type', 'Relation'] from /workspace/interapp-backend/db/entities
+	['User'] from /workspace/interapp-backend/db/entities
+/workspace/interapp/interapp-backend/db/entities/user_service.ts:
+	['Entity', 'type', 'Relation', 'ManyToOne', 'PrimaryColumn'] from /workspace/interapp-backend/db/entities
+	['User'] from /workspace/interapp-backend/db/entities
+	['Service'] from /workspace/interapp-backend/db/entities
+/workspace/interapp/interapp-backend/db/migrations/1701332375896-squash_and_initialise.ts:
+	['MigrationInterface', 'QueryRunner'] from /workspace/interapp-backend/db/migrations
+/workspace/interapp/interapp-backend/db/migrations/1702703834678-allow_user_deletion.ts:
+	['MigrationInterface', 'QueryRunner'] from /workspace/interapp-backend/db/migrations
+/workspace/interapp/interapp-backend/db/migrations/1703154060401-migrate_to_cdn.ts:
+	['MigrationInterface', 'QueryRunner'] from /workspace/interapp-backend/db/migrations
+/workspace/interapp/interapp-backend/db/migrations/1704100455933-allow_update_cascade.ts:
+	['MigrationInterface', 'QueryRunner'] from /workspace/interapp-backend/db/migrations
+/workspace/interapp/interapp-backend/db/migrations/1704278346229-add_profile_picture.ts:
+	['MigrationInterface', 'QueryRunner'] from /workspace/interapp-backend/db/migrations
+/workspace/interapp/interapp-backend/db/migrations/1704561016649-add_announcement_attachments.ts:
+	['MigrationInterface', 'QueryRunner'] from /workspace/interapp-backend/db/migrations
+/workspace/interapp/interapp-backend/db/migrations/1705067423579-add_attachment_mime.ts:
+	['MigrationInterface', 'QueryRunner'] from /workspace/interapp-backend/db/migrations
+/workspace/interapp/interapp-backend/db/migrations/1707138763473-update_service.ts:
+	['MigrationInterface', 'QueryRunner'] from /workspace/interapp-backend/db/migrations
+/workspace/interapp/interapp-backend/db/migrations/1711719410050-allow_many_to_1_ic.ts:
+	['MigrationInterface', 'QueryRunner'] from /workspace/interapp-backend/db/migrations
+/workspace/interapp/interapp-backend/tests/api/account.test.ts:
+	['test', 'expect', 'describe', 'afterAll', 'beforeAll'] from /workspace/interapp-backend/tests/api
+	['recreateDB'] from /interapp/interapp-backend/tests/api
+	['appDataSource'] from @utils/init_datasource
+	['User', 'UserPermission'] from @db/entities
+	['TestErrors'] from @utils/errors
+/workspace/interapp/interapp-backend/tests/api/announcement.test.ts:
+	['test', 'expect', 'describe', 'afterAll', 'beforeAll'] from /workspace/interapp-backend/tests/api
+	['recreateDB'] from /interapp/interapp-backend/tests/api
+	['appDataSource'] from @utils/init_datasource
+	['User', 'UserPermission'] from @db/entities
+	['TestErrors'] from @utils/errors
+/workspace/interapp/interapp-backend/tests/api/auth.test.ts:
+	['test', 'expect', 'describe', 'afterAll'] from /workspace/interapp-backend/tests/api
+	['recreateDB'] from /interapp/interapp-backend/tests/api
+/workspace/interapp/interapp-backend/tests/api/service.test.ts:
+	['test', 'expect', 'describe', 'afterAll', 'beforeAll'] from /workspace/interapp-backend/tests/api
+	['recreateDB'] from /interapp/interapp-backend/tests/api
+	['appDataSource'] from @utils/init_datasource
+	['User', 'UserPermission', 'ServiceSession', 'ServiceSessionUser'] from @db/entities
+	['TestErrors'] from @utils/errors
+/workspace/interapp/interapp-backend/tests/api/service_session.test.ts:
+	['test', 'expect', 'describe', 'afterAll', 'beforeAll'] from /workspace/interapp-backend/tests/api
+	['recreateDB'] from /interapp/interapp-backend/tests/api
+	['appDataSource'] from @utils/init_datasource
+	['User', 'UserPermission'] from @db/entities
+	['ServiceModel'] from @models/.
+	['randomBytes'] from /workspace/interapp-backend/tests/api
+	['redisClient'] from @utils/init_redis
+	['recreateRedis'] from /interapp/interapp-backend/tests/api
+	['TestErrors'] from @utils/errors
+/workspace/interapp/interapp-backend/tests/api/service_session_user.test.ts:
+	['test', 'expect', 'describe', 'afterAll', 'beforeAll'] from /workspace/interapp-backend/tests/api
+	['recreateDB'] from /interapp/interapp-backend/tests/api
+	['appDataSource'] from @utils/init_datasource
+	['User', 'UserPermission'] from @db/entities
+	['TestErrors'] from @utils/errors
+/workspace/interapp/interapp-backend/tests/api/service_user.test.ts:
+	['test', 'expect', 'describe', 'afterAll', 'beforeAll'] from /workspace/interapp-backend/tests/api
+	['recreateDB'] from /interapp/interapp-backend/tests/api
+	['appDataSource'] from @utils/init_datasource
+	['User', 'UserPermission'] from @db/entities
+	['TestErrors'] from @utils/errors
+/workspace/interapp/interapp-backend/tests/unit/AnnouncementModel.test.ts:
+	['runSuite', 'testSuites'] from /workspace/interapp/interapp-backend/tests/unit
+	['AuthModel', 'AnnouncementModel'] from @models/.
+	['User'] from @db/entities
+	['expect'] from /workspace/interapp-backend/tests/unit
+	['recreateDB'] from /workspace/interapp/interapp-backend/tests/unit
+	['readFileSync'] from /workspace/interapp-backend/tests/unit
+/workspace/interapp/interapp-backend/tests/unit/AttendanceExportsModel.test.ts:
+	['runSuite', 'testSuites'] from /workspace/interapp/interapp-backend/tests/unit
+	['AttendanceExportsModel', 'AuthModel', 'ServiceModel', 'UserModel'] from @models/.
+	['recreateDB'] from /workspace/interapp/interapp-backend/tests/unit
+	['AttendanceStatus', 'User'] from @db/entities
+	['expect'] from /workspace/interapp-backend/tests/unit
+/workspace/interapp/interapp-backend/tests/unit/AuthModel.test.ts:
+	['testSuites', 'runSuite'] from /workspace/interapp/interapp-backend/tests/unit
+	['AuthModel', 'UserModel'] from @models/.
+	['User'] from @db/entities
+	['expect'] from /workspace/interapp-backend/tests/unit
+	['recreateDB', 'recreateRedis'] from /workspace/interapp/interapp-backend/tests/unit
+/workspace/interapp/interapp-backend/tests/unit/ServiceHoursExportsModel.test.ts:
+	['runSuite', 'testSuites'] from /workspace/interapp/interapp-backend/tests/unit
+	['ServiceHoursExportsModel'] from @models/.
+	['User'] from @db/entities
+	['describe', 'test', 'expect'] from /workspace/interapp-backend/tests/unit
+/workspace/interapp/interapp-backend/tests/unit/ServiceModel.test.ts:
+	['testSuites', 'runSuite'] from /workspace/interapp/interapp-backend/tests/unit
+	['AuthModel', 'ServiceModel'] from @models/.
+	['expect'] from /workspace/interapp-backend/tests/unit
+	['recreateDB', 'recreateRedis'] from /workspace/interapp/interapp-backend/tests/unit
+	['redisClient'] from @utils/init_redis
+	['AttendanceStatus'] from @db/entities/service_session_user
+	['readFileSync'] from /workspace/interapp-backend/tests/unit
+	['randomBytes'] from /workspace/interapp-backend/tests/unit
+	['Service'] from @db/entities
+/workspace/interapp/interapp-backend/tests/unit/UserModel.test.ts:
+	['runSuite', 'testSuites'] from /workspace/interapp/interapp-backend/tests/unit
+	['AuthModel', 'UserModel', 'ServiceModel', 'AnnouncementModel'] from @models/.
+	['expect'] from /workspace/interapp-backend/tests/unit
+	['recreateDB', 'recreateRedis'] from /workspace/interapp/interapp-backend/tests/unit
+	['redisClient'] from @utils/init_redis
+	['Permissions'] from @utils/permissions
+	['AttendanceStatus'] from @db/entities
+	['readFileSync'] from /workspace/interapp-backend/tests/unit
+/workspace/interapp/interapp-backend/tests/utils/recreate_db.ts:
+	['appDataSource'] from @utils/init_datasource
+/workspace/interapp/interapp-backend/tests/utils/recreate_minio.ts:
+	['minioClient', 'createBucket'] from @utils/init_minio
+/workspace/interapp/interapp-backend/tests/utils/recreate_redis.ts:
+	['redisClient'] from @utils/init_redis
